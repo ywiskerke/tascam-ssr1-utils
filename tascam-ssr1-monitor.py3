@@ -1,9 +1,36 @@
 #!/usr/local/bin/python3
 
+ # Serial Monitor utility for Tascam-SS-R1
+# Copyright (C) 2021 Yvo Wiskerke
+
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 3 of the License, or
+#  (at your option) any later version.
+   
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software Foundation,
+#  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+
+# GNU General Public License version 3
+# License Copyright: Copyright © 2007 Free Software Foundation, Inc.
+# License License: "Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed." (www.gnu.org/licenses/gpl-3.0.en.html).
+# License Contact: Free Software Foundation (fsf.org).
+# SPDX short identifier: GPL-3.0-only
+# Further resources...
+#  
+
+
 import serial
 from time import sleep
 from datetime import datetime, date
 
+# Make sure you change this to your serial interface
 ser = serial.Serial("/dev/tty.usbserial-141340",19200)
 
 ser.bytesize = serial.EIGHTBITS #number of bits per bytes
