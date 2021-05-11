@@ -6,3 +6,8 @@ This code was written as a first exercise to understand the interaction with the
 ### Serial Connection
 
 Be sure to use the right serial cable if you are attempting the communication.
+
+Change the following line to reflect the correct serial connection on your machine:
+```python
+ser = serial.Serial("/dev/tty.usbserial-141340",19200)
+```
